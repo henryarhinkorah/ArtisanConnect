@@ -1,0 +1,1 @@
+justifyContent:'center',
