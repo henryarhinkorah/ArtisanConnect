@@ -9,14 +9,34 @@ export const styles = StyleSheet.create({
       fontWeight:'bold'
       
     },
+    CreateAccButton:{
+      backgroundColor:'black',
+      marginTop:30,
+      width:200,
+      height:40,
+     alignSelf:'center',
+     borderRadius:20,
+     alignItems: 'center', // Center horizontally
+     justifyContent: 'center', //center vertically
+     
+    },
+
+    MainContainer:{
+        justifyContent:'center',
+        alignItems:'center',
+        flexDirection:'row',
+    },
     
     logo:{
       height:30,
       width:30,
-      marginLeft:85,
-      marginTop:-27
+      marginTop:90,
+      marginRight:10,
+     
       
     },
+    
+    
   
     loginText:{
       fontSize:45,

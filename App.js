@@ -12,6 +12,8 @@ import NavigationItem from './src/components/NavigationItem';
 import ArtisanTypeOptionsScreen from './src/screens/ArtisanTypeOptionsScreen';
 import MessagesScreen from './src/screens/MessagesScreen';
 import MainContainer from './src/navigation/MainContainer';
+import MessagingScreen from './src/screens/MessagingScreen';
+import RegisterScreen from './src/screens/RegisterScreen';
 
 
 
@@ -34,7 +36,8 @@ export default function App({navigation}) {
           <Stack.Screen name="Homepage" component={HomepageScreen} options={{ headerShown: false }} />
           <Stack.Screen name="MainCont" component={MainContainer} options={{ headerShown: false }} />
           <Stack.Screen name="ArtisanType" component={ArtisanTypeOptionsScreen} options={{ headerShown: true}} />
-       
+          <Stack.Screen name="MessagingScreen" component={MessagingScreen} options={{ headerShown: false}} />
+          <Stack.Screen name="RegisterScreen" component={RegisterScreen} options={{ headerShown: false}}/>
     
         </Stack.Navigator>
         
@@ -68,18 +71,7 @@ function BottomNavigation() {
   
 
 
-  /*return (
-   
-    <View style={styles.NavigationSection}>
-      <NavigationItem icon="home" text="Home" marginLeftValue={20} iconDirectory="Ionicons" onPress={() => navigation.navigate('Home')}  />
-      <NavigationItem icon="star-outline" text="Favorites" marginLeftValue={20} iconDirectory="Ionicons"   onPress={() => navigation.navigate('Favorites')} disabled={false}  />
-      <NavigationItem icon="add-circle-outline" text="Add post" marginLeftValue={20} iconDirectory="Ionicons" />
-      <NavigationItem icon="message-outline" text="Messages" marginLeftValue={20} iconDirectory="MaterialCommunityIcons" onPress={() => navigation.navigate('Messages')} />
-      <NavigationItem icon="person-outline" text="Profile" marginLeftValue={20} iconDirectory="Ionicons" />
-    </View>
-    
-  ); 
-  */
+  
   
 }
 

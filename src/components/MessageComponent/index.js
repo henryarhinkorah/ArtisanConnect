@@ -1,11 +1,15 @@
 import { StyleSheet, Text, View,Image, TouchableOpacity } from 'react-native'
 import React from 'react'
+import { useNavigation } from '@react-navigation/native';
+
 
 const MessageComponent = () => {
-  return (
-
-    <TouchableOpacity> 
-<View style ={styles.container}>
+    const navigation = useNavigation(); // Get the navigation prop using the hook
+ 
+    return (
+    <TouchableOpacity  onPress={() =>
+        navigation.navigate('MessagingScreen')}> 
+ 
   
   <View style = {styles.ComponentContainer}>
   <Image
@@ -15,16 +19,20 @@ const MessageComponent = () => {
     <Text style= {styles.name}>Michael Watson</Text>
 
     </View>
-    <Text style ={styles.MessagePreview}> How much for the painting</Text>
-    <Text style = {styles.time}> 2:30pm</Text>
-    
-    <View style ={styles.MessageCountBackground}> 
-    <Text style ={styles.MessageCount}>2</Text>
+    <Text style ={styles.MessagePreview}> How much for the painting?</Text>
+  
+   <View style = {styles.SecondaryDetails}>
+        <Text style = {styles.time}> 2:30pm</Text>
+            
+            <View style ={styles.MessageCountBackground}> 
+            <Text style ={styles.MessageCount}>2</Text>
+           
+    </View> 
+   
     </View>
-
-
-
-    </View>    
+   
+    
+     
     </TouchableOpacity>
   )
 }
@@ -33,11 +41,6 @@ export default MessageComponent
 
 const styles = StyleSheet.create({
 
-    container:{
-      marginBottom:2,
-        backgroundColor:'white',
-        
-    },
     picture:{
         height:50,
         width:50,
@@ -49,8 +52,13 @@ const styles = StyleSheet.create({
     ComponentContainer:{
         
         flexDirection:'row',
-        width:400,
         height:70,
+        borderBottomWidth:0.3,
+        marginBottom:5,
+        width:'100%',
+        marginTop:15,
+        backgroundColor:'white',
+      
         
 
     },
@@ -66,11 +74,11 @@ const styles = StyleSheet.create({
         marginLeft:82,
         fontWeight:'300',
         fontStyle:'italic',
-        marginTop:-35
+        marginTop:-40,
+       
     },
     time:{
         fontSize:13,
-        marginLeft:330,
         marginTop:-45,
         
     },
@@ -90,11 +98,13 @@ const styles = StyleSheet.create({
        width:25,
        height:25,
        borderRadius:20,
-       marginLeft:340,
        marginTop:5,
-     
-       
-       
 
+    },
+
+    SecondaryDetails:{
+        flexDirection: 'column',
+    alignItems: 'flex-end',
+    marginRight: 10, 
     }
 })

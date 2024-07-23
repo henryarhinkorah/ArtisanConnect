@@ -14,6 +14,8 @@ const HomepageScreen = ({ navigation }) => {
           <Ionicons name="search" size={24} color="black" marginTop={30} />
         </TouchableOpacity>
       </View>
+
+     
       <FlatList
         data={categories}
         renderItem={({ item }) => <ArtisanComponent item={item} navigation={navigation} />}
@@ -21,9 +23,14 @@ const HomepageScreen = ({ navigation }) => {
         showsVerticalScrollIndicator={false}
         numColumns={3}
         backgroundColor={'white'}
+        contentContainerStyle={styles.flatListContent}
+        columnWrapperStyle={styles.columnWrapper}
+        
         onPress={() =>
           navigation.navigate('App', {screen: 'ArtisanType'})}
-      />
+       
+      /> 
+    
     </View>
   )
 }
@@ -32,7 +39,17 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
+
     
+  },
+
+  flatListContent: {
+    flexGrow: 1,
+    justifyContent: 'center',
+  },
+  columnWrapper: {
+    justifyContent: 'space-between',
+    paddingHorizontal: 10, // Adjust the padding as needed
   },
   HeaderContainer: {
     backgroundColor: 'black',

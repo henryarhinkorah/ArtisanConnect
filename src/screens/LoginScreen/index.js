@@ -1,6 +1,8 @@
 import { Text, View,Image,TextInput, Button, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import {styles} from './styles'
+import RegisterScreen from '../RegisterScreen'
+import { ScrollView } from 'react-native-gesture-handler'
 
 
  
@@ -17,18 +19,21 @@ import {styles} from './styles'
   
  
   return (
-
     
-    <View style ={styles}>
-      <Text style ={styles.LogoText}>ArtisansConnect</Text>
+  <View style ={styles}>
+     
+   <View style ={styles.MainContainer}>
+        
+          <Image
+          source={{
+            uri:
+            'https://th.bing.com/th/id/R.38eb8c8a4c384ebc6fc275586f008f28?rik=Huv2VGkuZPvgzw&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_410957.png&ehk=WlcjOEsrubQ49chQ5BY7uydl3rflPxSkUZ%2fatc7thzg%3d&risl=&pid=ImgRaw&r=0',
+          }}
+          style={styles.logo}>
+          </Image>
 
-      <Image
-      source={{
-        uri:
-        'https://th.bing.com/th/id/R.38eb8c8a4c384ebc6fc275586f008f28?rik=Huv2VGkuZPvgzw&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_410957.png&ehk=WlcjOEsrubQ49chQ5BY7uydl3rflPxSkUZ%2fatc7thzg%3d&risl=&pid=ImgRaw&r=0',
-      }}
-      style={styles.logo}>
-      </Image>
+          <Text style ={styles.LogoText}>ArtisanConnect</Text>
+  </View>
 
       <Text style ={styles.loginText}>Login</Text>
       <Text style ={styles.PleaseText}>Please sign in to continue</Text>
@@ -54,12 +59,19 @@ import {styles} from './styles'
       </View>
 
       <Text style = {styles.forgotPasswordText}> Forgot Password? </Text>
-      
+     
       <TouchableOpacity style ={styles.LoginButton} onPress={handleLogin}>
             <Text style = {styles.LoginButtonText}> Login </Text>
             
           </TouchableOpacity>
+
+          <TouchableOpacity style ={styles.CreateAccButton} marginTop={7} onPress={() =>
+          navigation.navigate('RegisterScreen')} >
+            <Text style = {styles.LoginButtonText}> Create Account</Text>
+            
+          </TouchableOpacity>
     </View>
+   
   )
 }
 

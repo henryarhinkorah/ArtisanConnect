@@ -11,26 +11,21 @@ const AddPostScreen = () => {
 
         <View style ={styles.header}>
             <Text style ={styles.HeaderText}> Add post</Text>
-
         </View>
        
-        
-            <Text style ={styles.ImageText}>
-                    Images
-                </Text>
-        
-        
+  <View style ={styles.inputContainer}>
+           
+       <Text style ={styles.ImageText}>Images:</Text>
         <View style ={styles.ImageBox}>
            
            <TouchableOpacity> 
                 <Ionicons name ='add-circle' size ={90} color='green'/>
             </TouchableOpacity>
         </View>
+  </View>
 
-
-        <Text style ={styles.ImageText} >
-                    Title:
-         </Text>
+  <View style ={styles.inputContainer}>
+        <Text style ={styles.ImageText} >Title: </Text>
       
         <TextInput
        style={styles.Titleinput}
@@ -38,10 +33,10 @@ const AddPostScreen = () => {
       
        onChangeText={setText}
        />
+   </View>
 
-    <Text style ={styles.ImageText} marginLeft={-300} >
-                   About:
-         </Text>
+  <View style ={styles.inputContainer}>
+    <Text style ={styles.ImageText} marginLeft={20}> About:</Text>
       
         <TextInput
        style={styles.Aboutinput}
@@ -49,10 +44,10 @@ const AddPostScreen = () => {
        value={text}
        onChangeText={setText}
        />
-
+  </View>
     <TouchableOpacity style = {styles.NextContainer}> 
        
-            <Text style ={styles.NextText}>Next</Text>
+            <Text style ={styles.PostText}>Post</Text>
       
        
        </TouchableOpacity>
@@ -66,12 +61,13 @@ const styles = StyleSheet.create({
 
 
     container:{
-        alignItems:'center'
+        alignItems:'center',
+        justifyContent:'center',
     },
 
     header:{
         height:60,
-        width:400,
+        width:'100%',
         backgroundColor:'black',
         justifyContent:'center',
         textAlign:'center',
@@ -86,18 +82,19 @@ const styles = StyleSheet.create({
 
     ImageBox:{
        height:200,
-       width:370, 
+       width:'90%', 
        borderWidth:1,
        borderColor:'black',
        marginTop:10,
        alignItems:'center',
        justifyContent:'center',
        borderRadius:6,
+       marginLeft:20,
     },
     ImageText:{
-        marginLeft:-315,
         marginTop:30,
-        fontSize:16
+        fontSize:16,
+        marginLeft:20,
     },
 
     Titleinput: {
@@ -108,6 +105,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
         marginTop: 0,
         borderRadius: 5,
+        marginLeft:20,
       },
 
       Aboutinput:{
@@ -117,8 +115,8 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         paddingHorizontal: 10,
         marginTop: 0,
-        borderRadius: 5
-        
+        borderRadius: 5,
+        marginLeft:20,
       },
 
       NextContainer:{
@@ -132,9 +130,15 @@ const styles = StyleSheet.create({
 
       },
 
-      NextText:{
+      PostText:{
         color:'white',
         fontSize:18
+      },
+      inputContainer:{
+        width: '100%',
+      
+        
+        
       }
 
 

@@ -16,7 +16,7 @@ const ProfileScreen = () => {
             <TouchableOpacity> 
                 <View style={styles.EditContainer}>
 
-                        <AntDesign name ='edit' color='black' size={22} marginLeft={6}/>
+                        <AntDesign name ='edit' color='black' size={22} marginLeft={8}/>
                 </View>
             </TouchableOpacity>
 
@@ -29,7 +29,6 @@ const ProfileScreen = () => {
       <ProfileOptionsComponent iconName="lock-closed-outline" text="Change password" iconLibrary="Ionicons" color="black" />
       <ProfileOptionsComponent iconName="email-outline" text="Change Email address" iconLibrary="MaterialCommunityIcons" color="black" />
       <ProfileOptionsComponent iconName="settings" text="Settings" iconLibrary="Ionicons" color="black" />
-      <ProfileOptionsComponent iconName="room-preferences" text="Preferences" iconLibrary="MaterialIcons" color="black" />
       <ProfileOptionsComponent iconName="logout" text="Logout" iconLibrary="MaterialIcons" color="red" />
       
       </View>
@@ -41,9 +40,13 @@ export default ProfileScreen
 
 const styles = StyleSheet.create({
 
-    container:{},
+    container:{
+        flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    },
     header:{
-        width:'100vw',
+        width:'100%',
         backgroundColor:'black',
         height:300,
         
@@ -79,10 +82,10 @@ const styles = StyleSheet.create({
     },
 
     container2:{
-        width:350,
+        width:'90%',
         height:'70%',
        backgroundColor:'white',
-       marginLeft:20,
+       marginLeft:0,
        borderRadius:15,
      
        marginTop:-75,

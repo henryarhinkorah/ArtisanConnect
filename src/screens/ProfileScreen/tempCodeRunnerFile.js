@@ -1,1 +1,1 @@
-<TouchableOpacity>
+ alignItems: 'center',

@@ -14,7 +14,7 @@ const FavoritesScreen = () => {
         data = {FavoritesData}
         renderItem={({item}) => <FavoritesComponent item = {item} />}
         keyExtractor={(item) => item.id}
-        showsVerticalScrollIndicator = {false}
+        showsVerticalScrollIndicator = {true}
         contentContainerStyle={{ paddingBottom: 140}}
         
       />
@@ -28,12 +28,12 @@ const styles = StyleSheet.create({
 
   HeaderContainer:{
     height:70,
-    width:420,
+    width:'100%',
    
     backgroundColor:'black',
     alignItems:'center',
     justifyContent:'center',
-    marginLeft:-10
+   
   },
 
   FavoritesText:{
@@ -41,5 +41,6 @@ const styles = StyleSheet.create({
     color:'white',
 
     
-  }
+  },
+  
 })
