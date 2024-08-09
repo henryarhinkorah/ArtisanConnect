@@ -1,8 +1,7 @@
 import { Text, View,Image,TextInput, Button, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 import {styles} from './styles'
-import RegisterScreen from '../RegisterScreen'
-import { ScrollView } from 'react-native-gesture-handler'
+
 
 
  
